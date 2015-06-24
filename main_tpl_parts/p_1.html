@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<head>
     <title>%custom in_meta('title')%</title>
     <meta name="description" content="%custom in_meta('description')%">
     <meta name="keywords" content="%custom in_meta('keywords')%">
 
     <meta charset="utf-8">
-    <!-- initial-scale=0.9 for making content width <= 100% on mobile devices -->
+    <!-- initial-scale=0.9 for making content width <= 100%
+    on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=0.9">
 
-    <meta name="author" content="Vladimir Shamsheev, svr93@i.ua">
-    <link rel="alternate" type="application/rss+xml" href="/data/rss/%content get_page_id('/novosti')%">
+    <meta name="author" content="Vladimir Shamsheev">
+    <link rel="author" href="mailto:svr93@i.ua">
+    <link rel="alternate" type="application/rss+xml"
+    href="/data/rss/%content get_page_id('/novosti')%">
     <style>
       /* #007000 - base green       */
       /* #beff8c - green (gradient) */
       /* #555555 - grey (text)      */
       /* #c8c8c8 - grey (border)    */
+
+      /* ----- interactive elements ----- */
+
+      #call_back, #lettersTitle, #ya_counter {
+        display: none; /* change 'display' property in the last defer script */
+      }
 
       /* ----- global ----- */
 
@@ -27,10 +35,10 @@
         margin: auto;
         width: 90%;
         font: 13px Tahoma;
-        color: #555555;
+        color: #555555; /* grey (text) */
       }
       a {
-        color: #007000;
+        color: #007000; /* base green */
       }
 
       /* ----- classes ----- */
@@ -43,14 +51,10 @@
         display: table-cell;
         vertical-align: middle;
       }
-      .top-bar {
-        display: inline-block;
-        width: 33%;
-      }
-      
+
       .menu {
         font: bold 12px Arial;
-      }   
+      }
       .menu__item {
         display: block;
         padding: 12px 0px 12px 8px;
@@ -67,13 +71,13 @@
         float: right;
         margin: 5px 0 5px 10px;
         padding: 1px;
-        border: 1px solid #c8c8c8;
+        border: 1px solid #c8c8c8; /* grey (border) */
       }
       .text-picture--left {
         float: left;
         margin: 5px 10px 5px 0;
         padding: 1px;
-        border: 1px solid #c8c8c8;
+        border: 1px solid #c8c8c8; /* grey (border) */
       }
     </style>
     
