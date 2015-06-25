@@ -2,7 +2,7 @@
     <!--[if lt IE 9]>
       <script>
         (function() {
-          var arr = ("header,footer,section,nav,article").split(",");
+          var arr = ('header,main,footer,section,nav,article').split(',');
           for (var i = 0; i < arr.length; ++i) {
             document.createElement(arr[i]);
           }
@@ -14,9 +14,8 @@
     <!--[if lt IE 10]>
       <script>
         function attachPIE() {
-          $(function() {
-            PIE.attach($('nav')[0]);
-          });
+          var nav = document.getElementsByTagName('nav')[0];
+          PIE.attach(nav);
         }
       </script>
     <![endif]-->
