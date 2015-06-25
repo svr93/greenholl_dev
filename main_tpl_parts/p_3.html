@@ -2,58 +2,9 @@
       function viewErr() {
         if (!window.err || err.innerHTML) return;
         
-        err.innerHTML = "Часть ресурсов не загружена из-за ошибок сервера. Если Вы испытываете проблемы с функциональностью сайта, обновите страницу...";
-      }
-
-      if (document.addEventListener) {
-
-        document.addEventListener("DOMContentLoaded", domLoadedInit);
-      } else {
-
-        document.attachEvent("onreadystatechange", function() {
-          if (document.readyState != "complete") return;
-
-          domLoadedInit();
-        });
-      }
-
-      function domLoadedInit() {
-        lettersTitle.onclick = function() {
-          if (window.showLetters) {
-            showLetters();
-          }
-
-          return false;
-        }
-
-        yaMetrika.onclick = function() {
-          if (window.Ya) {
-
-            Ya.Metrika.informer({
-              i: this,
-              id: 25444892,
-              lang: "ru"
-            });
-          }
-          
-          return false;
-        }
-
-        ladyContainer.onmouseover = function() {
-          animateLady();
-        }
-      }
-
-      window.onload = function() {
-        // window.scrollY is not supported in IE8
-
-        if (!window.addEventListener) return;
-
-        window.addEventListener("scroll", function() {
-          if (window.scrollY + (screen.availHeight - ladyContainer.offsetHeight) + 100 < ladyContainer.offsetTop) return;
-          
-          animateLady();
-        });
+        err.innerHTML = 'Часть ресурсов не загружена из-за ошибок серверов.\
+                         Если Вы испытываете проблемы с функциональностью\
+                         сайта, обновите страницу...';
       }
     </script>
     
