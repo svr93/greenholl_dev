@@ -1,24 +1,43 @@
-    <!-- the defer attribute is not supported in Opera 12 and earlier versions -->
-    <!-- onerror is not supported in IE8 -->
+    <!-- the defer attribute is not supported in Opera 14
+    and earlier versions [w3schools];
+    is not supported in Opera and IE Mobile [MDN] -->
+
+    <!-- onerror is not supported in IE8 [learn.javascript.ru] -->
 
     <!-- latest jQuery for modern browsers -->
     <!--[if gte IE 9]><!-->
-      <script defer src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js" onerror="viewErr()"></script>
+      <script defer
+      src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+      onerror="viewErr()">
+      </script>
     <!--<![endif]-->
-    <!-- latest jQuery for IE8 -->
+    <!-- not latest jQuery for IE8 (because of errors) -->
     <!--[if lt IE 9]>
-      <script defer src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script defer
+      src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+      </script>
     <![endif]-->
 
-    <!-- script for using CSS3 gradient in IE9 and earlier versions (PIE, latest version - 2.0 beta 1); maskedinput for modal window (latest version - 1.4.0) -->
+    <!-- script for using CSS3 gradient in IE9 and earlier versions
+    (PIE, latest version - 2.0 beta 1);
+    maskedinput for modal window (latest version - 1.4.1) -->
+
     <!--[if lt IE 9]>
-      <script defer src="//cdn.jsdelivr.net/css3pie/2.0b1/PIE_IE678.js" onreadystatechange="if (this.readyState == 'complete') { attachPIE(); }"></script>
+      <script defer
+      src="//cdn.jsdelivr.net/css3pie/2.0b1/PIE_IE678.js"
+      onreadystatechange="if (this.readyState == 'complete') { attachPIE(); }">
+      </script>
     <![endif]-->
     <!--[if IE 9]>
-      <script defer src="//cdn.jsdelivr.net/css3pie/2.0b1/PIE_IE9.js" onload="attachPIE()" onerror="viewErr()"></script>
+      <script defer
+      src="//cdn.jsdelivr.net/css3pie/2.0b1/PIE_IE9.js"
+      onload="attachPIE()" onerror="viewErr()">
+      </script>
     <![endif]-->
 
     <!--[if lt IE 10]>
-      <script defer src="//cdn.jsdelivr.net/jquery.maskedinput/1.3.1/jquery.maskedinput.min.js"></script>
+      <script defer
+      src="//cdn.jsdelivr.net/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js">
+      </script>
     <![endif]-->
         
